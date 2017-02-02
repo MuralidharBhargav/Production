@@ -1,0 +1,32 @@
+<%= form_for(bill_reciept) do |f| %>
+  <% if bill_reciept.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(bill_reciept.errors.count, "error") %> prohibited this bill_reciept from being saved:</h2>
+
+      <ul>
+      <% bill_reciept.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Title %>
+    <%= f.text_area :Title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :amount %>
+    <%= f.text_field :amount %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

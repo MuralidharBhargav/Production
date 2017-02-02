@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @bill_reciept.Title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @bill_reciept.description %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @bill_reciept.amount %>
+</p>
+
+<%= link_to 'Edit', edit_bill_reciept_path(@bill_reciept) %> |
+<%= link_to 'Back', bill_reciepts_path %>

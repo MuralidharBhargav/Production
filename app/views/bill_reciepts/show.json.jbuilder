@@ -1,0 +1,1 @@
+json.partial! "bill_reciepts/bill_reciept", bill_reciept: @bill_reciept

@@ -1,0 +1,2 @@
+module BillRecieptsHelper
+end

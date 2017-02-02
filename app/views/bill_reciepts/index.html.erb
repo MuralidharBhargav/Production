@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Bill Reciepts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Amount</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bill_reciepts.each do |bill_reciept| %>
+      <tr>
+        <td><%= bill_reciept.Title %></td>
+        <td><%= bill_reciept.description %></td>
+        <td><%= bill_reciept.amount %></td>
+        <td><%= link_to 'Show', bill_reciept %></td>
+        <td><%= link_to 'Edit', edit_bill_reciept_path(bill_reciept) %></td>
+        <td><%= link_to 'Destroy', bill_reciept, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Bill Reciept', new_bill_reciept_path %>
