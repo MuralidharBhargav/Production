@@ -1,0 +1,2 @@
+class PinBil < ApplicationRecord
+end

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :pin_bils
   resources :bill_reciepts
   resources :bills
   resources :articles

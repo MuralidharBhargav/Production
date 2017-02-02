@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @pin_bil.Title %>
+</p>
+
+<p>
+  <strong>Date of payment:</strong>
+  <%= @pin_bil.Date_of_payment %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @pin_bil.Description %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @pin_bil.amount %>
+</p>
+
+<%= link_to 'Edit', edit_pin_bil_path(@pin_bil) %> |
+<%= link_to 'Back', pin_bils_path %>

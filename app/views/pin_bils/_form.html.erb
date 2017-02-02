@@ -1,0 +1,37 @@
+<%= form_for(pin_bil) do |f| %>
+  <% if pin_bil.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(pin_bil.errors.count, "error") %> prohibited this pin_bil from being saved:</h2>
+
+      <ul>
+      <% pin_bil.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Title %>
+    <%= f.text_area :Title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Date_of_payment %>
+    <%= f.text_area :Date_of_payment %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Description %>
+    <%= f.text_area :Description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :amount %>
+    <%= f.text_area :amount %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

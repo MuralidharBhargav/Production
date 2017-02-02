@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Pin Bils</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Date of payment</th>
+      <th>Description</th>
+      <th>Amount</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pin_bils.each do |pin_bil| %>
+      <tr>
+        <td><%= pin_bil.Title %></td>
+        <td><%= pin_bil.Date_of_payment %></td>
+        <td><%= pin_bil.Description %></td>
+        <td><%= pin_bil.amount %></td>
+        <td><%= link_to 'Show', pin_bil %></td>
+        <td><%= link_to 'Edit', edit_pin_bil_path(pin_bil) %></td>
+        <td><%= link_to 'Destroy', pin_bil, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pin Bil', new_pin_bil_path %>

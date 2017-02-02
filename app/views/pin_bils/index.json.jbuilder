@@ -1,0 +1,1 @@
+json.array! @pin_bils, partial: 'pin_bils/pin_bil', as: :pin_bil

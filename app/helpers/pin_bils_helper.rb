@@ -1,0 +1,2 @@
+module PinBilsHelper
+end
